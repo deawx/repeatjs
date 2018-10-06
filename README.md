@@ -1,13 +1,7 @@
-<div style="padding: 8em 0">
-    <div style="font-size:6em">
-        RepeatJS
-    </div>
-    <span>
-        By Leonhard Pfob
-    </span>
-</div>
+# RepeatJS 
+by Leonhard Pfob
 
-# How it works!
+## How it works!
 
 First you need to include the script. You can either use the way shown in the example or download and include it yourself. 
 
@@ -39,7 +33,7 @@ In this case the header would be displayed 10 times. The expected output is:
 ... 7 more times
 ```
 
-## Example 1 - Hello World
+### Example 1 - Hello World
 
 This is the way it would look, if you followed the instructions step by step:
 
@@ -54,7 +48,7 @@ This is the way it would look, if you followed the instructions step by step:
 </html>
 ```
 
-## Example 2 - Hello Planet
+### Example 2 - Hello Planet
 
 You can also use the repeat attribute in bigger structures. If a child element is repeatet and its parent, too, it will repeat the child element first and copy them in every repeation of the parent element.
 
@@ -81,7 +75,7 @@ This would produce the following output:
 ... 2 more times
 ```
 
-# Purpose
+## Purpose
 
 "Why would I use this?" you might ask. Developing a web application you usually don't include the logic right away, but focus on getting all your elements ready. If you use example elements, you often have to copy them. If you change something up, you have to do so for every single one. Instead, you could use **repeat.js**, which helps you avoid this issue and stay organized.
 
