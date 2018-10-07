@@ -1,0 +1,25 @@
+{
+  "name": "repeat.js",
+  "version": "1.0.0",
+  "description": "A JavaScript library to automatically repeat HTML elements. ",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leopf/repeatjs"
+  },
+  "author": "Leonhard Pfob",
+  "license": "MIT",
+  "homepage": "git+https://github.com/leopf/repeatjs",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
+  },
+  "dependencies": {}
+}
