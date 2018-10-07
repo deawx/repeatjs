@@ -75,6 +75,19 @@ This would produce the following output:
 ... 2 more times
 ```
 
+### Example 3 - Repeating Texts
+If you are trying different text lengths, you don't have to paste your text multiple times. Instead you can use the "repeat-text" attribute to copy texts.
+
+```html
+<h1 repeat-text="3">Hello World!</h1>
+```
+
+The expected result is: 
+
+```html
+<h1>Hello World!Hello World!Hello World!</h1>
+```
+
 ## Purpose
 
 "Why would I use this?" you might ask. Developing a web application you usually don't include the logic right away, but focus on getting all your elements ready. If you use example elements, you often have to copy them. If you change something up, you have to do so for every single one. Instead, you could use **repeat.js**, which helps you avoid this issue and stay organized.
