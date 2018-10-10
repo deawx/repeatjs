@@ -66,21 +66,28 @@ repeat.initializeElements = function()
     for (const indexedElement of indexedElements) 
     {
         let repeat = indexedElement.element.getAttribute("repeat-element") - 1;
-        indexedElement.element.removeAttribute("repeat-element");
+        if (repeat > 0)
+        {
+            indexedElement.element.removeAttribute("repeat-element");
 
-        if (indexedElement.element.parentElement.childElementCount > 1)
-        {
-            for (var i = 0; i < repeat; i++)
+            if (indexedElement.element.parentElement.childElementCount > 1)
             {
-                indexedElement.element.parentElement.insertBefore(indexedElement.element.cloneNode(true), indexedElement.element);
+                for (var i = 0; i < repeat; i++)
+                {
+                    indexedElement.element.parentElement.insertBefore(indexedElement.element.cloneNode(true), indexedElement.element);
+                }
             }
-        }
-        else
-        {
-            for (var i = 0; i < repeat; i++)
+            else
             {
-                indexedElement.element.parentElement.appendChild(indexedElement.element.cloneNode(true));
+                for (var i = 0; i < repeat; i++)
+                {
+                    indexedElement.element.parentElement.appendChild(indexedElement.element.cloneNode(true));
+                }
             }
+        } 
+        else if (repeat == -1)
+        {
+            indexedElement.element.parentElement.removeChild(indexedElement.element);
         }
     }
 }

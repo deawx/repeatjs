@@ -101,16 +101,20 @@ repeat.initializeElements = function () {
 
     var _repeat2 = indexedElement.element.getAttribute("repeat-element") - 1;
 
-    indexedElement.element.removeAttribute("repeat-element");
+    if (_repeat2 > 0) {
+      indexedElement.element.removeAttribute("repeat-element");
 
-    if (indexedElement.element.parentElement.childElementCount > 1) {
-      for (var i = 0; i < _repeat2; i++) {
-        indexedElement.element.parentElement.insertBefore(indexedElement.element.cloneNode(true), indexedElement.element);
+      if (indexedElement.element.parentElement.childElementCount > 1) {
+        for (var i = 0; i < _repeat2; i++) {
+          indexedElement.element.parentElement.insertBefore(indexedElement.element.cloneNode(true), indexedElement.element);
+        }
+      } else {
+        for (var i = 0; i < _repeat2; i++) {
+          indexedElement.element.parentElement.appendChild(indexedElement.element.cloneNode(true));
+        }
       }
-    } else {
-      for (var i = 0; i < _repeat2; i++) {
-        indexedElement.element.parentElement.appendChild(indexedElement.element.cloneNode(true));
-      }
+    } else if (_repeat2 == -1) {
+      indexedElement.element.parentElement.removeChild(indexedElement.element);
     }
   }
 };
